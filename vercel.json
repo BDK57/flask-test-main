@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "zeroConfig": true
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -14,13 +11,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "build": {
-    "env": {
-      "PYTHONPATH": "/usr/local/lib/python3.7/site-packages"
-    },
-    "commands": [
-      "./build.sh"
-    ]
-  }
+  ]
 }
